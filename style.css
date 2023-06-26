@@ -1,0 +1,147 @@
+body {
+    margin: auto;
+    padding: 25px 0 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    width: 60%;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    margin: auto;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .dash{
+    left: 0;
+    position: fixed;
+    top: 0;
+    padding-left: 100px;
+    text-decoration: none;
+  }
+
+  .dashbtn{
+    background-color: #000;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .header h1 {
+    margin: auto;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
+  
+  .sidebar.opened {
+    width: 250px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    position: fixed;
+    top: 0;
+    left: 5px;
+    font-size: 36px;
+    margin-top: 7px;
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #4a4a4a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    padding: 20px;
+    margin-left: 0;
+    transition: margin-left 0.5s;
+  }
+  
+  #main.opened {
+    margin-left: 250px;
+  }
+  
+  .content {
+    padding: 20px;
+    margin-left: 0;
+    transition: margin-left 0.5s;
+  }
+  
+  .content.opened {
+    margin-left: 250px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
